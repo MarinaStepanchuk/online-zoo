@@ -1,0 +1,10 @@
+@import 'normalize', 'fonts';
+
+$font-roboto: 'Roboto', 'Arial', sans-serif;
+$font-roboto-medium: 'RobotoMedium', 'Arial', sans-serif;
+$font-roboto-light: 'RobotoLight', 'Arial', sans-serif;
+
+html {
+    scroll-behavior: smooth;
+    font-family: $font-roboto;
+}
