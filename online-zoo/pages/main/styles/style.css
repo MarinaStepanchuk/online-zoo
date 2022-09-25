@@ -382,6 +382,7 @@ body {
   font-family: "Roboto", "Arial", sans-serif;
   color: #FFFFFF;
   width: 100%;
+  font-size: 16px;
 }
 
 .header-wrapper {
@@ -577,7 +578,7 @@ h1 {
   color: #FFEE2E;
 }
 
-.button {
+.greeting-wrapper .greeting-container .greeting-block .greeting-button {
   width: 298px;
   height: 54px;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -587,5 +588,262 @@ h1 {
   color: #FFFFFF;
   text-transform: uppercase;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.greeting-wrapper .greeting-container .greeting-block .greeting-button:hover {
+  background: #E47209;
+}
+
+.greeting-wrapper .greeting-container .greeting-block .greeting-button:active {
+  background: #4B9200;
+}
+
+.backstage-wrapper {
+  width: 100%;
+  color: #333B41;
+  padding-top: 140px;
+  padding-bottom: 180px;
+  background-image: url("../../../assets/images/main/flower_foto1.jpg");
+  background-position: right top 12px;
+  background-repeat: no-repeat;
+}
+
+.backstage-wrapper .backstage-container {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 87px;
+  text-align: left;
+  font-weight: 400;
+}
+
+.backstage-wrapper .backstage-container .backstage-text-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.backstage-wrapper .backstage-container .backstage-text-block .backstage-title {
+  font-weight: 400;
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.backstage-wrapper .backstage-container .backstage-text-block .backstage-text-block1 {
+  line-height: 1.4;
+  margin-bottom: 54px;
+}
+
+.backstage-wrapper .backstage-container .backstage-text-block .backstage-text-work {
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 34px;
+}
+
+.backstage-wrapper .backstage-container .backstage-text-block .backstage-text-block2 {
+  line-height: 1.35;
+}
+
+.animals-gallery-wrapper {
+  width: 100%;
+  background-image: url("../../../assets/images/main/palm_foto.jpg"), url("../../../assets/images/main/strelitzia 1.jpg");
+  background-position: left bottom, right bottom;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.animals-gallery-wrapper .animals-gallery-container {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 80px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 28px;
+  grid-auto-rows: 426px;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .arrow {
+  position: absolute;
+  top: 402px;
+  width: 62px;
+  height: 62px;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .arrow-left {
+  left: -82px;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .arrow-right {
+  right: -80px;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card {
+  position: relative;
+  border: #FA6F32 1px solid;
+  border-radius: 5px;
+  overflow: hidden;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #000000;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  height: 366px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card:hover {
+  height: 426px;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card:hover .card-animal {
+  background-size: calc(100% + 20px);
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card .card-animal {
+  width: 366px;
+  height: 366px;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card .pandas {
+  background-image: url("../../../assets/images/main/gallery-panda.jpg");
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card .eagles {
+  background-image: url("../../../assets/images/main/gallery-eagles.jpg");
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card .gorillas {
+  background-image: url("../../../assets/images/main/gallery-gorillas.jpg");
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card .sloth {
+  background-image: url("../../../assets/images/main/gallery-sloth.jpg");
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card .cheetahs {
+  background-image: url("../../../assets/images/main/gallery-cheerahs.jpg");
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card .penguins {
+  background-image: url("../../../assets/images/main/gallery-penguins.jpg");
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card .card-signature {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  z-index: -5;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 8px 12px 14px 16px;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card .card-signature .signature-text-title {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 0px;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .card .card-signature .signature-text {
+  font-family: "RobotoLight", "Arial", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery-button {
+  width: 298px;
+  height: 54px;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 25px;
+  outline: 0;
+  border: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery-button:hover {
+  background: #E47209;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery-button:active {
+  background: #4B9200;
 }
 /*# sourceMappingURL=style.css.map */
