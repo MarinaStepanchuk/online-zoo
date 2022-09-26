@@ -445,10 +445,18 @@ span {
   font-weight: 500;
 }
 
+.header-container .nav-logo-container .navigation a:hover {
+  color: #f9804b;
+}
+
 .header-container .origin-link {
   display: block;
   font-size: 16px;
   font-weight: 500;
+}
+
+.header-container .origin-link:hover {
+  color: #f9804b;
 }
 
 .logo {
@@ -1145,6 +1153,10 @@ h1 {
   margin: 0px;
   margin-bottom: 13px;
   margin-left: 120px;
+}
+
+.footer-links-container .navigation a:hover {
+  color: #f9804b;
 }
 
 .footer-links-container .copyright-container {

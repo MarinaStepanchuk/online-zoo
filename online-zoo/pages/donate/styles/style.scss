@@ -99,12 +99,18 @@ span {
                     gap: 58px;
                     font-size: 16px;
                     font-weight: 500;
+                     a:hover {
+                        color: rgb(249, 128, 75);
+                     }
                 }
         }
     .origin-link {
         display: block;
         font-size: 16px;
         font-weight: 500;
+        &:hover {
+            color: rgb(249, 128, 75);
+         }
     }
 }
 
@@ -559,7 +565,10 @@ h1 {
             font-weight: 500;
             margin: 0px;
             margin-bottom: 13px;
-            margin-left: 120px
+            margin-left: 120px;
+                a:hover {
+                    color: rgb(249, 128, 75);
+                }
         }
         .copyright-container {
             @include flex-direction(column);  
