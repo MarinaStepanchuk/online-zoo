@@ -609,6 +609,7 @@ h1 {
     @include flex-direction(row);
     justify-content: space-between;
     align-items: flex-start;
+    padding-bottom: 40px;
         .donate-button {
             @include button(298px, 54px, 5px);
             margin-top: 70px;
@@ -633,15 +634,29 @@ h1 {
                         box-sizing: border-box;
                         padding-left: 10px;
                         background-color: #000000;
+                        color: #FFFFFF;
                         border:#F9804B 0.7px solid;
                         border-radius: 2px;
+                        outline: none;
+                        &:valid{
+                            border:#4B9200 0.7px solid;
+                        }
+                        // &:invalid{
+                        //     border:#D31414 0.7px solid;   
+                        // }
+                        // &:invalid {
+                        //     .form-button{
+                        //     color: #4B9200;
+                        //     border: 1px solid #4B9200;}  
+                            
+                        // }
                     }
                     .form-button {
                         width: 129px;
                         height: 42px;
                         background: #F1F3F2;
-                        color: #4B9200;
-                        border: 1px solid #4B9200;
+                        color: #333B41;
+                        border: 1px solid #333B41;
                         border-radius: 5px;
                         outline: 0;
                         font-weight: 400;
@@ -655,10 +670,24 @@ h1 {
     @include flex-direction(row);
     justify-content: space-between;
     align-items: flex-end;
+        .social-network-container {
+            margin: 0px;
+        }
+        .social-network-container li {
+            cursor: pointer;
+            &:active .social-icon-wrapper {
+                background: #4B9200;
+            }
+        }
         .social-network-container li a {
             @include flex-direction(row);
             justify-content: flex-start;
             align-items: center;
+            gap: 12px;
+            &:active {
+                color: #4B9200;
+            }
+            margin-bottom: 11px;
                 .social-icon-wrapper {
                     width: 26px;
                     height: 26px;
@@ -667,15 +696,33 @@ h1 {
                     @include flex-direction(row);
                     justify-content: center;
                     align-items: center;
+                    &:active {
+                        background: #4B9200;
+                    }
+                }
+        }
+        .navigation {
+            @include flex-direction(row);
+            gap: 58px;
+            font-size: 16px;
+            font-weight: 500;
+            margin: 0px;
+            margin-bottom: 13px;
+            margin-left: 120px
+        }
+        .copyright-container {
+            @include flex-direction(column);  
+            font-family: $font-roboto-light;
+            font-weight: 100;
+            font-size: 16px;
+            line-height: 130%;
+            gap: 8px;
+            margin-bottom: 11px;
+                &:active{
+                    color: #4B9200;
+                    text-decoration: underline;
+                    text-underline-offset: 7px;
+                    text-decoration-color: #4B9200;
                 }
         }
 }
-
-
-
-
-
-
-
-
-
