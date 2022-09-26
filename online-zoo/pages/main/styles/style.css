@@ -408,17 +408,8 @@ h3 {
   z-index: 10;
   background-color: #000000;
   width: 100%;
-  height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .header-container {
@@ -736,6 +727,10 @@ h1 {
       -ms-flex-pack: center;
           justify-content: center;
   cursor: pointer;
+}
+
+.animals-gallery-wrapper .animals-gallery-container .gallery .arrow:active {
+  background: #4B9200;
 }
 
 .animals-gallery-wrapper .animals-gallery-container .gallery .arrow-left {
@@ -1221,5 +1216,177 @@ h1 {
 
 .feedback-wrapper .feedback-container .feedback-button:active {
   background: #4B9200;
+}
+
+.footer-wrapper {
+  background-color: #000000;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.footer-container {
+  max-width: 1160px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer-upper-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer-upper-container .donate-button {
+  width: 298px;
+  height: 54px;
+  font-family: "RobotoMedium", "Arial", sans-serif;
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  border-radius: 5px;
+  outline: 0;
+  border: none;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 70px;
+}
+
+.footer-upper-container .donate-button:hover {
+  background: #E47209;
+}
+
+.footer-upper-container .donate-button:active {
+  background: #4B9200;
+}
+
+.footer-upper-container .form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-upper-container .form-container .form-title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  text-align: left;
+  padding-bottom: 13px;
+}
+
+.footer-upper-container .form-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.footer-upper-container .form-container form .form-input {
+  width: 228px;
+  height: 43px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 10px;
+  background-color: #000000;
+  border: #F9804B 0.7px solid;
+  border-radius: 2px;
+}
+
+.footer-upper-container .form-container form .form-button {
+  width: 129px;
+  height: 42px;
+  background: #F1F3F2;
+  color: #4B9200;
+  border: 1px solid #4B9200;
+  border-radius: 5px;
+  outline: 0;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.footer-links-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.footer-links-container .social-network-container li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-links-container .social-network-container li a .social-icon-wrapper {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(196, 196, 196, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */

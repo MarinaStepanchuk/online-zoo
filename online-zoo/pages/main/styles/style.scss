@@ -92,9 +92,11 @@ h3 {
     z-index: 10;
     background-color: #000000;
     width: 100%;
-    height: 80px;
-    @include flex-direction(row);
-    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    // height: 80px;
+    // @include flex-direction(row);
+    // align-items: center;
 }
 
 .header-container {
@@ -275,6 +277,9 @@ h1 {
                             align-items: center;
                             justify-content: center;
                             cursor: pointer;
+                            &:active {
+                                background: #4B9200;
+                            }
                         }
                         .arrow-left {
                             left: -82px;
@@ -585,6 +590,86 @@ h1 {
         }
 }
 
+//---------footer-----------
+
+.footer-wrapper {
+    background-color: #000000;
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-container {
+    @include width-block();
+    @include flex-direction(column);
+    justify-content: space-between;
+}
+
+.footer-upper-container {
+    @include flex-direction(row);
+    justify-content: space-between;
+    align-items: flex-start;
+        .donate-button {
+            @include button(298px, 54px, 5px);
+            margin-top: 70px;
+        }
+        .form-container {
+            @include flex-direction(column);
+            .form-title {
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 120%;
+                text-align: left;
+                padding-bottom: 13px
+            }
+            form {
+                @include flex-direction(row);
+                justify-content: space-between;
+                align-items: center;
+                gap: 10px;
+                    .form-input {
+                        width: 228px;
+                        height: 43px;
+                        box-sizing: border-box;
+                        padding-left: 10px;
+                        background-color: #000000;
+                        border:#F9804B 0.7px solid;
+                        border-radius: 2px;
+                    }
+                    .form-button {
+                        width: 129px;
+                        height: 42px;
+                        background: #F1F3F2;
+                        color: #4B9200;
+                        border: 1px solid #4B9200;
+                        border-radius: 5px;
+                        outline: 0;
+                        font-weight: 400;
+                        cursor: pointer;
+                    }
+            }
+        }
+}
+
+.footer-links-container {
+    @include flex-direction(row);
+    justify-content: space-between;
+    align-items: flex-end;
+        .social-network-container li a {
+            @include flex-direction(row);
+            justify-content: flex-start;
+            align-items: center;
+                .social-icon-wrapper {
+                    width: 26px;
+                    height: 26px;
+                    border-radius: 50%;
+                    background: rgba(196, 196, 196, 0.5);
+                    @include flex-direction(row);
+                    justify-content: center;
+                    align-items: center;
+                }
+        }
+}
 
 
 
