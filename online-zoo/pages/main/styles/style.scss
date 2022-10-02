@@ -81,6 +81,10 @@ h3 {
     line-height: 130%;
     padding-bottom: 4.0rem;
     color: #333B41;
+
+    @media screen and (max-width: 640px) {
+        padding-bottom: 2rem;
+    }
 }
 
 //--------------header------------------------
@@ -416,8 +420,11 @@ h1 {
 
                         .greeting-button {
                             @include button(298px, 54px);
-                            align-self: flex-start;
-                            margin-top: -9px;
+
+                            @media screen and (max-width: 640px) {
+                                align-self: flex-start;
+                                margin-top: -9px;
+                            }
                         }
                 }
                 
@@ -594,8 +601,13 @@ h1 {
     background-image: url('../../../assets/images/main/palm_foto.jpg'), url('../../../assets/images/main/strelitzia\ 1.jpg');
     background-position: left bottom, right bottom;
     background-repeat: no-repeat, no-repeat;
+
         @media screen and (max-width: 1580px) {
             background-image: url('../../../assets/images/main/1000px/palm_foto.png'), url('../../../assets/images/main/1000px/strelitzia\ 1.png');
+        }
+
+        @media screen and (max-width: 640px) {
+            background-image: url('../../../assets/images/main/640px/palm_foto.png'), url('../../../assets/images/main/640px/strelitzia\ 1.png');
         }
 
         .animals-wrapper {
@@ -625,7 +637,12 @@ h1 {
             }
 
             @media screen and (max-width: 760px) {
-                @include width-block(630px);
+                @include width-block(600px);
+            }
+
+            @media screen and (max-width: 640px) {
+                gap: 61px;
+                padding-bottom: 10.0rem;
             }
         }
 
@@ -650,7 +667,7 @@ h1 {
             }
 
             @media screen and (max-width: 760px) {
-                @include width-block(630px);
+                @include width-block(600px);
             }
 
        } 
@@ -695,7 +712,12 @@ h1 {
 
         @media screen and (max-width: 760px) {
             left: 22rem;
-            top: 37rem;
+            top: 36rem;
+        }
+
+        @media screen and (max-width: 640px) {
+            left: 22.3rem;
+            top: 34.4rem;
         }
     
 }
@@ -721,7 +743,12 @@ h1 {
 
     @media screen and (max-width: 760px) {
         right: 22rem;
-        top: 37rem;
+        top: 36rem;
+    }
+
+    @media screen and (max-width: 640px) {
+        right: 22.3rem;
+        top: 34.4rem;
     }
 }
 
@@ -755,7 +782,7 @@ h1 {
     }
 
     @media screen and (max-width: 760px) {
-        width: 1350px;
+        width: 1230px;
     }
 
         .card {
@@ -820,6 +847,8 @@ h1 {
 
 
                     @media screen and (max-width: 760px) {
+                        width: 285px;
+                        height: 285px;
                         background-position: left top;
                     }
                 }
@@ -866,6 +895,22 @@ h1 {
                     @include flex-direction(row);
                     justify-content: space-between;
                     padding: 0.8rem 1.2rem 1.1rem 1.6rem;
+
+                    @media screen and (max-width: 640px) {
+                        padding: 0.6rem 0.7rem 0.2rem 1.3rem;
+                    }
+
+                        .vegan {
+                            @media screen and (max-width: 760px) {
+                                width: 25.72px;
+                            }
+                        }
+
+                        .meet {
+                            @media screen and (max-width: 760px) {
+                                width: 37.41px;
+                            }
+                        }
                 }
 
                 .signature-text-title {
@@ -873,12 +918,22 @@ h1 {
                     text-transform: uppercase;
                     margin: 0px;
                     font-family: $font-roboto-medium;
+
+                    @media screen and (max-width: 640px) {
+                        font-size: 1.25rem;
+                        line-height: 140%;
+                    }
                 }
 
                 .signature-text {
                     font-family: $font-roboto-light;
                     font-weight: 300;
                     font-size: 1.5rem;
+
+                    @media screen and (max-width: 640px) {
+                        font-size: 1.17rem;
+                        line-height: 120%;
+                    }
                 }
 
                 .card-background {
@@ -908,10 +963,18 @@ h1 {
 
                         .signature-text-title {
                             font-size: 2.2rem;
+
+                            @media screen and (max-width: 640px) {
+                                font-size: 1.6rem;
+                            }
                         }
 
                         .signature-text {
                             font-size: 1.8rem;
+
+                            @media screen and (max-width: 640px) {
+                                font-size: 1.5rem;
+                            }
                         }                        
                 }
 
@@ -941,6 +1004,12 @@ h1 {
         @include width-block(740px);
     }
 
+    @media screen and (max-width: 640px) {
+        @include width-block(640px);
+        padding-top: 0rem;
+        padding-bottom: 2.0rem;
+    }
+
         .donate-container-blur {
             @include width-block();
             box-sizing: border-box;
@@ -964,6 +1033,11 @@ h1 {
                 @media screen and (max-width: 760px) {
                     @include width-block(630px);
                 }
+
+                @media screen and (max-width: 640px) {
+                    @include width-block(640px);
+                    padding: 3.1rem 4.8rem 6rem;
+                }
         }
 }
 
@@ -972,6 +1046,10 @@ h1 {
     align-items: center;
     justify-content: space-between;
     color: #333B41;
+
+    @media screen and (max-width: 640px) {
+        @include width-block(600px);
+    }
 }  
 
 .donate-paragraph {
@@ -988,6 +1066,10 @@ h1 {
     @media screen and (max-width: 1000px) {
         padding-bottom: 2.0rem;
     }
+
+    @media screen and (max-width: 640px) {
+        font-size: 4.2rem;
+    }
 }
 
 .donate-paragraph1 {
@@ -1000,6 +1082,13 @@ h1 {
         display: block;
         padding-bottom: 2.2rem;
     }
+
+    @media screen and (max-width: 640px) {
+        font-size: 2.2rem;
+        width: 600px;
+        padding-bottom: 1.8rem;
+        text-align: justify;
+    }
 }
 
 .donate-paragraph2 {
@@ -1010,6 +1099,11 @@ h1 {
 
     @media screen and (max-width: 1000px) {
         width: 97%;
+    }
+
+    @media screen and (max-width: 640px) {
+        font-family: $font-roboto-medium;
+        width: 600px;
     }
 }
 
@@ -1023,6 +1117,11 @@ h1 {
     @media screen and (max-width: 1000px) {
         width: 97%;
         padding-bottom: 4.0rem;
+    }
+
+    @media screen and (max-width: 640px) {
+        width: 600px;
+        padding-bottom: 3.0rem;
     }
 
         a {
@@ -1042,6 +1141,7 @@ h1 {
 }
 
 .donate-instruction {
+    position: relative;
     @include flex-direction(row);
     justify-content: flex-start;
     gap: 30px;
@@ -1059,14 +1159,25 @@ h1 {
         gap: 10px;
     }
 
+    @media screen and (max-width: 640px) {
+        gap: 42px;
+        margin-right: 12px;
+        padding-bottom: 4.2rem;
+    }
+
         .donate-instruction-card {
             @include flex-direction(column);
             align-items: flex-start;
             justify-content: flex-start; 
             max-width: 168px;
             gap: 30px;
+
             @media screen and (max-width: 760px) {
                 width: 130px;
+            }
+
+            @media screen and (max-width: 640px) {
+                width: 168px;
             }
         }
 
@@ -1085,6 +1196,37 @@ h1 {
                 width: 130px;
                 height: 130px;
             }
+
+            @media screen and (max-width: 640px) {
+                width: 168px;
+                height: 168px;
+            }
+        }
+
+        .donate-instruction-arrow-mobile {
+            display: none;
+
+            @media screen and (max-width: 640px) {
+                display: block;
+                position: absolute;
+                top: -16px;
+                width: 100px;
+                height: 30px;
+                background-image: url("../../../assets/icons/arrow-green.png");
+                background-repeat: no-repeat;
+            }
+        }
+
+        .arrow1 {
+            @media screen and (max-width: 640px) {
+                left: 137px; 
+            }
+        }
+
+        .arrow2 {
+            @media screen and (max-width: 640px) {
+                left: 345px; 
+            }
         }
 
         .donate-instruction-arrow {
@@ -1093,6 +1235,10 @@ h1 {
             background-image: url('../../../assets/icons/arrow.svg');
             background-repeat: no-repeat;
             background-position: center top 6.3rem;
+
+            @media screen and (max-width: 640px) {
+                display: none;
+            }
         }
 
         .donate-instruction-card-description {
@@ -1118,6 +1264,11 @@ h1 {
         background-position: right bottom -8.7rem;
     }
 
+    @media screen and (max-width: 1000px) {
+        background-image: url('../../../assets/images/main/640px/leav_foto.png');
+        background-position: right bottom -6.9rem;
+    }
+
         .feedback-container{
             @include width-block();
             @include flex-direction(column);
@@ -1126,26 +1277,16 @@ h1 {
             align-items: center;
             overflow: hidden;
 
-            @media screen and (max-width: 1300px) {
-                @include width-block(1100px);
-            }
-
-            @media screen and (max-width: 1150px) {
-                @include width-block(980px);
-            }
-
             @media screen and (max-width: 1000px) {
                 @include width-block(940px);
                 padding-top: 10.2rem;
                 padding-bottom: 14.0rem;
             }
 
-            @media screen and (max-width: 950px) {
-                @include width-block(740px);
-            }
-
-            @media screen and (max-width: 760px) {
-                @include width-block(630px);
+            @media screen and (max-width: 640px) {
+                @include width-block(600px);
+                padding-top: 6.2rem;
+                padding-bottom: 8rem;
             }
         }
 }
@@ -1161,43 +1302,52 @@ h1 {
 .feedback-comment-container {
    @include flex-direction(row);
    gap: 28px;
-   justify-content: space-between;
+   justify-content: space-around;
    padding-bottom: 1.7rem;
    align-self: flex-start;
-   padding-left: 1.5px;
+   padding-left: 2px;
+   padding-right: 2px;
 
-   @media screen and (max-width: 1000px) {
+    @media screen and (max-width: 1000px) {
         gap: 32.5px;
-   }
+    }
+
+    @media screen and (max-width: 640px) {
+        @include flex-direction(column);
+        gap: 16px;
+        padding-bottom: 4.2rem;
+    }
         
         .feedback-item {
             position: relative;
-            width: 267.5px;
             background: #F1F3F2;
             box-sizing: border-box;
             border-radius: 20px;
             padding: 1.5rem 1.5rem 0.8rem 1.6rem;
             margin-top: 0.2rem;
-            
+            width: 100%;
 
-            @media screen and (max-width: 1300px) {
-                width: 250px;
-            }
-
-            @media screen and (max-width: 1150px) {
-                width: 220px; 
+            &:nth-child(1n+5) {
+                display: none;
             }
 
             @media screen and (max-width: 1000px) {
-                width: 290px;
+                &:nth-child(1n+4) {
+                    display: none;
+                }
             }
 
-            @media screen and (max-width: 980px) {
-                width: 350px;
-            }
+            @media screen and (max-width: 640px) {
+                padding: 1.5rem 1.5rem 0.8rem 1.1rem;
 
-            @media screen and (max-width: 760px) {
-                width: 295px;
+                &:nth-child(2n) {
+
+                    padding: 1rem 1.5rem 1.2rem 0.9rem;
+
+                    .feedback-item-photo {
+                        padding-right: 0.7rem;
+                    }
+                }
             }
         }
 
@@ -1246,6 +1396,13 @@ h1 {
                 &::-webkit-scrollbar {
                     width: 0;
                 }
+
+                @media screen and (max-width: 640px) {
+                    max-height: 36px;
+                    overflow-y: scroll;
+                    overflow-x: auto;
+                    padding-left: 5px;
+                }
         }
 }
 
@@ -1255,6 +1412,10 @@ h1 {
 
     @media screen and (max-width: 1000px) {
         margin-bottom: 4.6rem;
+    }
+
+    @media screen and (max-width: 640px) {
+        display: none;
     }
 }
 
@@ -1319,6 +1480,11 @@ h1 {
 .feedback-button {
    @include button(298px, 54px, 5px);
    align-self: flex-start;
+
+   @media screen and (max-width: 640px) {
+    @include button(240px, 54px, 5px);
+        align-self: center;
+    }
 }
 
 //---------footer-----------
@@ -1328,12 +1494,18 @@ h1 {
     width: 100%;
     padding-top: 4.0rem;
     padding-bottom: 4.0rem;
+
+    @media screen and (max-width: 640px) {
+        padding-top: 1.1rem;
+        padding-bottom: 4.0rem;
+    }
 }
 
 .footer-container {
     @include width-block();
     @include flex-direction(column);
     justify-content: space-between;
+    position: relative;
 
         @media screen and (max-width: 1300px) {
             @include width-block(1100px);
@@ -1354,6 +1526,10 @@ h1 {
         @media screen and (max-width: 760px) {
             @include width-block(630px);
         }
+
+        @media screen and (max-width: 640px) {
+            @include width-block(600px);
+        }
 }
 
 .footer-upper-container {
@@ -1367,13 +1543,29 @@ h1 {
         gap: 40px;
     }
 
+    @media screen and (max-width: 640px) {
+        padding-bottom: 7.0rem;
+    }
+
         .logo {
+            width: 82px;
+            height: 52px;
             border: 1px solid #FFFFFF;
+
+                img {
+                    width: 12px;
+                    left: 1.2rem;
+                    bottom: 0.8rem;
+                }
         }
 
         .donate-button {
             @include button(298px, 54px, 5px);
             margin-top: 7.0rem;
+
+            @media screen and (max-width: 640px) {
+                margin-top: 3.2rem;
+            }
         }
 
         .form-container {
@@ -1381,6 +1573,10 @@ h1 {
 
             @media screen and (max-width: 1000px) {
                 padding-right: 3.2rem;
+            }
+
+            @media screen and (max-width: 640px) {
+                display: none;
             }
 
             .form-title {
@@ -1435,13 +1631,29 @@ h1 {
 
         .social-network-container {
             margin: 0px;
+
+            @media screen and (max-width: 640px) {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+            }
         }
 
         .social-network-container li {
             cursor: pointer;
 
+            @media screen and (max-width: 640px) {
+                margin-bottom: 2rem;
+            }
+
                 &:active .social-icon-wrapper {
                     background: #4B9200;
+                }
+
+                & a p {
+                    @media screen and (max-width: 640px) {
+                        display: none;
+                    }
                 }
         }
 
@@ -1492,6 +1704,11 @@ h1 {
             @media screen and (max-width: 760px) {
                 margin-left: 3rem;
                 gap: 15px;
+            }
+
+            @media screen and (max-width: 640px) {
+                margin-left: 0rem;
+                gap: 37px;
             }
 
                 a:hover {
