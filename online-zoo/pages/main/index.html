@@ -37,8 +37,11 @@
         <section class="greeting-wrapper">
             <div class="greeting-container">
                 <div class="greeting-block">
-                    <div class="greeting-circle"></div> 
-                    <h2 class="greeting-text">Watch your <span>favorite</span> animal online</h2>
+                    <div class="greeting-text-container">
+                        <div class="greeting-circle"></div> 
+                        <h2 class="greeting-text">Watch your <span>favorite</span> animal online</h2>
+                    </div>
+                    
                     <button class="greeting-button">watch online</button>
                 </div>
             </div>
@@ -56,20 +59,22 @@
         </section>
         <section class="animals-gallery-wrapper">
             <div class="animals-wrapper">
-                <div class="arrow arrow-left">
-                    <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.00202 9.10791L5.10646 9.20923L5.2109 9.10791L5.35106 8.97193L5.46204 8.86427L5.35106 8.75661L1.74949 5.26276L17 5.26276H17.15V5.11276V4.92044V4.77044H17L1.74986 4.77044L5.35107 1.27659L5.46204 1.16893L5.35106 1.06127L5.2109 0.925298L5.10646 0.823971L5.00201 0.925298L0.895554 4.90913L0.784573 5.0168L0.895559 5.12446L5.00202 9.10791Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.3"/>
-                        </svg>
-                </div>
-                <div class="arrow arrow-right">
-                    <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.998 0.892334L12.8935 0.791016L12.7891 0.892338L12.6489 1.02831L12.538 1.13598L12.6489 1.24364L16.2505 4.73748H1H0.85V4.88748V5.07981V5.22981H1H16.2501L12.6489 8.72365L12.538 8.83131L12.6489 8.93897L12.7891 9.07495L12.8935 9.17627L12.998 9.07495L17.1044 5.09111L17.2154 4.98345L17.1044 4.87578L12.998 0.892334Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.3"/>
-                    </svg>
-                </div>
                 <div class="animals-gallery-container">
+                    <div class="arrow arrow-left">
+                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.00202 9.10791L5.10646 9.20923L5.2109 9.10791L5.35106 8.97193L5.46204 8.86427L5.35106 8.75661L1.74949 5.26276L17 5.26276H17.15V5.11276V4.92044V4.77044H17L1.74986 4.77044L5.35107 1.27659L5.46204 1.16893L5.35106 1.06127L5.2109 0.925298L5.10646 0.823971L5.00201 0.925298L0.895554 4.90913L0.784573 5.0168L0.895559 5.12446L5.00202 9.10791Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.3"/>
+                            </svg>
+                    </div>
                     <div class="gallery">
                         <div class="card">
-                            <div class="card-animal pandas"></div>
+                            <div class="temp">
+                                <img class="card-animal pandas" src="../../assets/images/main/gallery-panda.jpg"></img>
+                                <div class="card-background"></div>
+                                <div class="ascent-text">
+                                    <p class="signature-text-title text-show">giant Pandas</p>
+                                    <span class="signature-text text-show">Native to Southwest China</span>
+                                </div>
+                            </div>
                             <div class="card-signature">
                                 <div class="signature">
                                     <p class="signature-text-title">giant Pandas</p>
@@ -77,14 +82,16 @@
                                 </div>
                                 <img class="vegan" src="../../assets/icons/banana-bamboo_icon.png" alt="banana and bamboo">
                             </div>
-                            <div class="card-background"></div>
-                            <div class="ascent-text">
-                                <p class="signature-text-title">giant Pandas</p>
-                                <span class="signature-text">Native to Southwest China</span>
-                            </div>
                         </div>
                         <div class="card">
-                            <div class="card-animal eagles"></div>
+                            <div class="temp">
+                                <img class="card-animal eagles" src="../../assets/images/main/gallery-eagles.jpg"></img>
+                                <div class="card-background"></div>
+                                <div class="ascent-text">
+                                    <p class="signature-text-title text-show">Eagles</p>
+                                    <span class="signature-text text-show">Native to South America</span>
+                                </div>
+                            </div>
                             <div class="card-signature">
                                 <div class="signature">
                                     <p class="signature-text-title">Eagles</p>
@@ -92,14 +99,16 @@
                                 </div>
                                 <img class="meet" src="../../assets/icons/meet-fish_icon.png" alt="meet and fish">
                             </div>
-                            <div class="card-background"></div>
-                            <div class="ascent-text">
-                                <p class="signature-text-title">Eagles</p>
-                                <span class="signature-text">Native to South America</span>
-                            </div>
                         </div>
                         <div class="card">
-                            <div class="card-animal gorillas"></div>
+                            <div class="temp">
+                                <img class="card-animal gorillas" src="../../assets/images/main/gallery-gorillas.jpg"></img>
+                                <div class="card-background"></div>
+                                <div class="ascent-text">
+                                    <p class="signature-text-title text-show">Gorillas</p>
+                                    <span class="signature-text text-show">Native to Congo</span>
+                                </div>
+                            </div>
                             <div class="card-signature">
                                 <div class="signature">
                                     <p class="signature-text-title">Gorillas</p>
@@ -107,29 +116,16 @@
                                 </div>
                                 <img class="vegan"  src="../../assets/icons/banana-bamboo_icon.png" alt="banana and bamboo">
                             </div>
-                            <div class="card-background"></div>
-                            <div class="ascent-text">
-                                <p class="signature-text-title">Gorillas</p>
-                                <span class="signature-text">Native to Congo</span>
-                            </div>
                         </div>
                         <div class="card">
-                            <div class="card-animal alligators"></div>
-                            <div class="card-signature">
-                                <div class="signature">
-                                    <p class="signature-text-title">Alligators</p>
-                                    <span class="signature-text">Native to Southeastern U. S.</span>
+                            <div class="temp">
+                                <img class="card-animal sloth" src="../../assets/images/main/gallery-sloth.jpg"></img>
+                                <div class="card-background"></div>
+                                <div class="ascent-text">
+                                    <p class="signature-text-title text-show">Two-toed Sloth</p>
+                                    <span class="signature-text text-show">Mesoamerica, South America</span>
                                 </div>
-                                <img class="vegan"  src="../../assets/icons/banana-bamboo_icon.png" alt="banana and bamboo">
                             </div>
-                            <div class="card-background"></div>
-                            <div class="ascent-text">
-                                <p class="signature-text-title">Alligators</p>
-                                <span class="signature-text">Native to Southeastern U. S.</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-animal sloth"></div>
                             <div class="card-signature">
                                 <div class="signature">
                                     <p class="signature-text-title">Two-toed Sloth</p>
@@ -137,14 +133,16 @@
                                 </div>
                                 <img class="vegan"  src="../../assets/icons/banana-bamboo_icon.png" alt="banana and bamboo">
                             </div>
-                            <div class="card-background"></div>
-                            <div class="ascent-text">
-                                <p class="signature-text-title">Two-toed Sloth</p>
-                                <span class="signature-text">Mesoamerica, South America</span>
-                            </div>
                         </div>
                         <div class="card">
-                            <div class="card-animal cheetahs"></div>
+                            <div class="temp">
+                                <img class="card-animal cheetahs" src="../../assets/images/main/gallery-cheerahs.jpg"></img>
+                                <div class="card-background"></div>
+                                <div class="ascent-text">
+                                    <p class="signature-text-title text-show">cheetahs</p>
+                                    <span class="signature-text text-show">Native to Africa</span>
+                                </div>
+                            </div>
                             <div class="card-signature">
                                 <div class="signature">
                                     <p class="signature-text-title">cheetahs</p>
@@ -152,14 +150,16 @@
                                 </div>
                                 <img class="meet"  src="../../assets/icons/meet-fish_icon.png" alt="meet and fish">
                             </div>
-                            <div class="card-background"></div>
-                            <div class="ascent-text">
-                                <p class="signature-text-title">cheetahs</p>
-                                <span class="signature-text">Native to Africa</span>
-                            </div>
                         </div>
                         <div class="card">
-                            <div class="card-animal penguins"></div>
+                            <div class="temp">
+                                <img class="card-animal penguins" src="../../assets/images/main/gallery-penguins.jpg"></img>
+                                <div class="card-background"></div>
+                                <div class="ascent-text">
+                                    <p class="signature-text-title text-show">Penguins</p>
+                                    <span class="signature-text text-show">Native to Antarctica</span>
+                                </div>
+                            </div>
                             <div class="card-signature">
                                 <div class="signature">
                                     <p class="signature-text-title">Penguins</p>
@@ -167,27 +167,29 @@
                                 </div>
                                 <img class="meet" src="../../assets/icons/meet-fish_icon.png" alt="meet and fish">
                             </div>
-                            <div class="card-background"></div>
-                            <div class="ascent-text">
-                                <p class="signature-text-title">Penguins</p>
-                                <span class="signature-text">Native to Antarctica</span>
-                            </div>
                         </div>
                         <div class="card">
-                            <div class="card-animal pandas1"></div>
+                            <div class="temp">
+                                <img class="card-animal alligators" src="../../assets/images/main/gallery-alligators.jpg"></img>
+                                <div class="card-background"></div>
+                                <div class="ascent-text">
+                                    <p class="signature-text-title text-show">Alligators</p>
+                                    <span class="signature-text text-show">Native to Southeastern U. S.</span>
+                                </div>
+                            </div>
                             <div class="card-signature">
                                 <div class="signature">
-                                    <p class="signature-text-title">giant Pandas</p>
-                                    <span class="signature-text">Native to Southwest China</span>
+                                    <p class="signature-text-title">Alligators</p>
+                                    <span class="signature-text">Native to Southeastern U. S.</span>
                                 </div>
-                                <img class="vegan" src="../../assets/icons/banana-bamboo_icon.png" alt="banana and bamboo">
-                            </div>
-                            <div class="card-background"></div>
-                            <div class="ascent-text">
-                                <p class="signature-text-title">giant Pandas</p>
-                                <span class="signature-text">Native to Southwest China</span>
+                                <img class="vegan"  src="../../assets/icons/banana-bamboo_icon.png" alt="banana and bamboo">
                             </div>
                         </div>
+                    </div>
+                    <div class="arrow arrow-right">
+                        <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.998 0.892334L12.8935 0.791016L12.7891 0.892338L12.6489 1.02831L12.538 1.13598L12.6489 1.24364L16.2505 4.73748H1H0.85V4.88748V5.07981V5.22981H1H16.2501L12.6489 8.72365L12.538 8.83131L12.6489 8.93897L12.7891 9.07495L12.8935 9.17627L12.998 9.07495L17.1044 5.09111L17.2154 4.98345L17.1044 4.87578L12.998 0.892334Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="0.3"/>
+                        </svg>
                     </div>
                 </div>
                 <button class="gallery-button">choose your favorite</button>
@@ -214,7 +216,7 @@
                         </div>
                         <div class="donate-instruction-arrow-mobile arrow1"></div>
                         <div class="donate-instruction-arrow-mobile arrow2"></div>
-                        <div class="donate-instruction-card">
+                        <div class="donate-instruction-card card2">
                             <div class="donate-instruction-card-container">
                                 <img src="../../assets/icons/zoo.png" alt="zoo">
                             </div>
