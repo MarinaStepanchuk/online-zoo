@@ -735,8 +735,9 @@ main {
             background-image: url('../../../assets/images/main/640px/palm_foto.png'), url('../../../assets/images/main/640px/strelitzia\ 1.png');
         }
 
-        @media screen and (max-width: 320px) {
+        @media screen and (max-width: 520px) {
             background-image: url('../../../assets/images/main/320px/palm_foto.png'), url('../../../assets/images/main/320px/strelitzia\ 1.png');
+            background-position: left bottom 1px, right bottom -3px;
         }
 
         .animals-wrapper {
@@ -1048,10 +1049,6 @@ main {
         padding-bottom: 5.0rem;
     }
 
-    @media screen and (max-width: 950px) {
-        @include width-block(740px);
-    }
-
     @media screen and (max-width: 640px) {
         @include width-block(640px);
         padding-top: 0rem;
@@ -1079,13 +1076,17 @@ main {
                     padding: 3.1rem 4.8rem 5rem;
                 }
 
+                @media screen and (max-width: 950px) {
+                    @include width-block(740px);
+                }
+
                 @media screen and (max-width: 760px) {
                     @include width-block(630px);
                 }
 
                 @media screen and (max-width: 640px) {
                     @include width-block(640px);
-                    padding: 3.1rem 4.8rem 6rem;
+                    padding: 1.1rem 4.8rem 6rem;
                 }
 
                 @media screen and (max-width: 320px) {
@@ -1119,6 +1120,10 @@ main {
 
     @media screen and (max-width: 1000px) {
         padding-bottom: 2.0rem;
+    }
+
+    @media screen and (max-width: 640px) {
+        font-size: 4.2rem;
     }
 
     @media screen and (max-width: 550px) {
