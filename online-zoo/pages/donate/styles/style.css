@@ -1427,7 +1427,7 @@ h1 {
     width: 20px;
     height: 20px;
     outline-offset: -7px;
-    left: -20%;
+    left: 20%;
     top: -7px;
   }
 }
