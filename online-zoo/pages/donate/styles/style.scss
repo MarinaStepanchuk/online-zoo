@@ -88,15 +88,8 @@ h3 {
 
     @media screen and (max-width: 640px) {
         font-size: 24px;
+        padding-bottom: 1rem;
     }
-
-    // @media screen and (max-width: 640px) {
-    //     padding-bottom: 2rem;
-    // }
-
-    // @media screen and (max-width: 320px) {
-    //     font-size: 2.4rem;
-    // }
 }
 
 //--------------header------------------------
@@ -356,6 +349,13 @@ h1 {
         height: 369px;
         background-size: auto;
     }
+
+    @media screen and (max-width: 320px) {
+        background-image: url('../../../assets/images/donate/320px/Panda\ diet\ for\ the\ day..jpg');
+        background-position: top 3.4rem right;
+        height: 220px;
+        background-size: auto;
+    }
 }
 
 //-------------donate-------------
@@ -382,6 +382,16 @@ h1 {
 
     @media screen and (max-width: 640px) {
         @include width-block(600px);
+        padding-top: 30px;
+        padding-bottom: 29px;
+    }
+
+    @media screen and (max-width: 320px) {
+        @include width-block(300px);
+    }
+
+    @media screen and (max-width: 320px) {
+        padding-bottom: 24px;
     }
 
     h3 {
@@ -394,6 +404,12 @@ h1 {
             // text-align: left;
             width: 90%;
             padding-bottom: 31px;
+        }
+
+        @media screen and (max-width: 640px) {
+            width: 100%;
+            font-size: 2.4rem;
+            padding-bottom: 15px;
         }
     }
 
@@ -422,13 +438,17 @@ h1 {
         @include width-block(600px);
     }
 
+    @media screen and (max-width: 320px) {
+        @include width-block(300px);
+    }
+
         h3 {
             text-align: left;
             font-weight: 400;
             font-size: 36px;
             line-height: 130%;
 
-            @media screen and (max-width: 640px) {
+            @media screen and (max-width: 320px) {
                 font-size: 24px;
             }
         }
@@ -446,6 +466,14 @@ h1 {
         padding-bottom: 30px;
     }
 
+    @media screen and (max-width: 640px) {
+        padding-bottom: 46px;
+    }
+
+    @media screen and (max-width: 320px) {
+        padding-bottom: 19px;
+    }
+
         .donate-container-blur {
             @include width-block();
             box-sizing: border-box;
@@ -460,6 +488,12 @@ h1 {
 
             @media screen and (max-width: 640px) {
                 @include width-block(600px);
+                padding: 31px 0px 29px;
+            }
+
+            @media screen and (max-width: 320px) {
+                @include width-block(300px);
+                padding: 22px 0px 19px;
             }
 
                 .donate-container {
@@ -480,7 +514,15 @@ h1 {
                                 padding-bottom: 11px;
                             }
 
+                            @media screen and (max-width: 640px) {
+                                padding-bottom: 21px;
+                                padding-left: 14px;
+                            }
 
+                            @media screen and (max-width: 320px) {
+                                font-size: 24px;
+                                padding-bottom: 10px;
+                            }
                         }
                 }  
         }
@@ -491,6 +533,15 @@ h1 {
     font-weight: 400;
     font-size: 24px;
     line-height: 120%;
+
+    @media screen and (max-width: 640px) {
+        align-self: center;
+        text-align: center;
+    }
+
+    @media screen and (max-width: 320px) {
+        font-size: 16px;
+    }
 }
 
 .donate-sketch {
@@ -501,14 +552,41 @@ h1 {
     margin-bottom: 45px;
     margin-left: -15px;
 
+    @media screen and (max-width: 640px) {
+        margin-top: 50px;
+        margin-bottom: 39px;
+    }
+
+    @media screen and (max-width: 550px) {
+        width: 85%;
+    }
+
+    @media screen and (max-width: 320px) {
+        margin-top: 13px;
+        width: 100%;
+        margin-left: 7px;
+        margin-bottom: 3px;
+    }
+
+
         .donate-sketch-info {
             margin-top: 50px;
+
+            @media screen and (max-width: 320px) {
+                margin-top: 29px;
+            }
         }
 
         .donate-sketch-multiply {
             margin-left: 15px;
             margin-right: 60px;
             margin-top: 23px;
+
+            @media screen and (max-width: 320px) {
+                margin-left: 0px;
+                margin-right: 37px;
+                margin-top: 12px;
+            }
         }
 
         .donate-sketch-amount {
@@ -518,6 +596,11 @@ h1 {
             text-align: center;
             text-transform: uppercase;
             color: #000000;
+
+            @media screen and (max-width: 320px) {
+                font-size: 40.6px;
+                font-family: $font-roboto-medium;
+            }
         }
 
         .donate-sketch-text {
@@ -527,6 +610,29 @@ h1 {
             text-align: center;
             color: #333B41;
             margin-top: 13px;
+
+            @media screen and (max-width: 320px) {
+                font-size: 9px;
+            }
+        }
+
+        .cross {
+            @media screen and (max-width: 320px) {
+                width: 7.89px;
+                height: 7.89px;
+            }
+        }
+
+        .icon {
+            @media screen and (max-width: 550px) {
+                width: 100%;
+                height: 100%;
+            }
+
+            @media screen and (max-width: 320px) {
+                width: 160px;
+                height: 138px;
+            }
         }
 }
 
@@ -541,6 +647,15 @@ h1 {
     padding-left: 4px;
     padding-bottom: 19px;
     color: #000000;
+
+    @media screen and (max-width: 640px) {
+        padding-left: 10px;
+        padding-bottom: 8px;
+    }
+
+    @media screen and (max-width: 640px) {
+        padding-left: 0px;
+    }
 }
 
 .donate-form {
@@ -569,6 +684,15 @@ h1 {
         width: 96%;
     }
 
+    @media screen and (max-width: 640px) {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 320px) {
+        height: 13.5px;
+        margin-bottom: 49px;
+    }
+
     &::before {
         content: "";
         position: absolute;
@@ -582,6 +706,27 @@ h1 {
             left: 1.5%;
             width: 96.5%;
         }
+
+        @media screen and (max-width: 1000px) {
+            left: 7.5%;
+            width: 85.5%;
+        }
+
+        @media screen and (max-width: 500px) {
+            left: 9.5%;
+            width: 80.5%;
+        }
+
+        @media screen and (max-width: 400px) {
+            left: 7.5%;
+            width: 85.5%;
+        }
+
+        @media screen and (max-width: 320px) {
+            left: 6.5%;
+            width: 87.5%;
+            top: 7px;
+        }
     }
 
     .amount-item {
@@ -592,6 +737,15 @@ h1 {
 
         @media screen and (max-width: 1000px) {
             &:nth-child(1) {
+                display: none;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
                 display: none;
             }
         }
@@ -617,6 +771,20 @@ h1 {
                     padding: 0 10px;
                 }
 
+                @media screen and (max-width: 640px) {
+                    padding: 0 35px;
+                }
+
+                @media screen and (max-width: 400px) {
+                    padding: 0 25px;
+                }
+                @media screen and (max-width: 320px) {
+                    width: 5px;
+                    height: 5px;
+                    margin-top: 4px;
+                    padding: 2px 18px;
+                }
+
                 &::before {
                     content: "";
                     position: absolute;
@@ -633,6 +801,22 @@ h1 {
                     @media screen and (max-width: 1000px) {
                         top: -17px;
                         left: -23%;
+                    }
+
+                    @media screen and (max-width: 640px) {
+                        left: 22%;
+                    }
+
+                    @media screen and (max-width: 400px) {
+                        left: -4%;
+                    }
+
+                    @media screen and (max-width: 320px) {
+                        width: 20px;
+                        height: 20px;
+                        outline-offset: -7px;
+                        left: -20%;
+                        top: -7px;
                     }
                 }
             }
@@ -651,6 +835,28 @@ h1 {
                 padding-top: 3px;
                 color: #000000;
                 user-select: none;
+
+                @media screen and (max-width: 640px) {
+                    left: 19px;
+                }
+
+                @media screen and (max-width: 400px) {
+                    left: 6px;
+                }
+
+                @media screen and (max-width: 320px) {
+                    font-size: 13px;
+                    top: 10px;
+                    left: 9px;
+                }
+
+                svg {
+                    @media screen and (max-width: 320px) {
+                        width: 5px;
+                        height: 10px;
+                    } 
+                }
+                
             }
     
 }
@@ -683,6 +889,11 @@ h1 {
     background-position: right 10px center;
     padding: 16px 7px;
 
+    @media screen and (max-width: 640px) {
+        width: 181px;
+        height: 43px;
+    }
+
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button {
             -webkit-appearance: none;
@@ -706,6 +917,10 @@ h1 {
     margin-top: 3px;
     gap: 33px;
 
+    @media screen and (max-width: 640px) {
+        margin-bottom: 14px;
+    }
+
         .monthly {
             margin-left: 50px;
         }
@@ -728,6 +943,14 @@ h1 {
         .radio:not(checked) + label {
             position: relative;
             padding: 20px 0 15px 20px;
+
+            @media screen and (max-width: 640px) {
+                padding: 29px 0 15px 20px;
+            }
+
+            @media screen and (max-width: 320px) {
+                padding: 24px 0 15px 20px;
+            }
         } 
 
         .radio:not(checked) + label:before {
@@ -739,6 +962,11 @@ h1 {
             width: 16px;
             height: 16px;
             border: 1px solid #FE9013;
+
+            @media screen and (max-width: 640px) {
+                top: 29px;
+                left: -8px;
+            }
         }  
 
         .radio:not(checked) + label:after {
@@ -753,6 +981,11 @@ h1 {
             box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5);
             opacity: 0;
             transition: all 0.2s;
+
+            @media screen and (max-width: 640px) {
+                top: 31px;
+                left: -6px;
+            }
         }  
 
         .radio:checked + label:after {
@@ -771,6 +1004,10 @@ h1 {
     color: #333B41;
     margin-top: 30px;
     margin-left: 5px;
+
+    @media screen and (max-width: 320px) {
+        width: 101%;
+    }
 }
 
 
