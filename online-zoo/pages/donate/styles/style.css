@@ -1610,6 +1610,13 @@ h1 {
   }
 }
 
+@media screen and (max-width: 320px) {
+  .donate-choice .radio:not(checked) + label:before {
+    top: 24px;
+    left: -10px;
+  }
+}
+
 .donate-choice .radio:not(checked) + label:after {
   content: "";
   position: absolute;
@@ -1630,6 +1637,13 @@ h1 {
   .donate-choice .radio:not(checked) + label:after {
     top: 31px;
     left: -6px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .donate-choice .radio:not(checked) + label:after {
+    top: 26px;
+    left: -7px;
   }
 }
 

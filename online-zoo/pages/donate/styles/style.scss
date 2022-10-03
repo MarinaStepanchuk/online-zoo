@@ -967,6 +967,11 @@ h1 {
                 top: 29px;
                 left: -8px;
             }
+
+            @media screen and (max-width: 320px) {
+                top: 24px;
+                left: -10px;
+            }
         }  
 
         .radio:not(checked) + label:after {
@@ -985,6 +990,11 @@ h1 {
             @media screen and (max-width: 640px) {
                 top: 31px;
                 left: -6px;
+            }
+
+            @media screen and (max-width: 320px) {
+                top: 26px;
+                left: -7px;
             }
         }  
 
