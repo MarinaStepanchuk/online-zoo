@@ -2423,8 +2423,7 @@ h1 {
 
 @media screen and (max-width: 1000px) {
   .feedback-wrapper {
-    background-image: url("../../../assets/images/main/640px/leav_foto.png");
-    background-position: right bottom -6.9rem;
+    background-position: right bottom -8.6rem;
   }
 }
 
