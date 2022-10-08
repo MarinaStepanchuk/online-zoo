@@ -29,15 +29,8 @@ const sliderFeedback = document.querySelector('.feedback-comment-container');
 const sliderItem = document.querySelector('.feedback-item');
 
 let width = parseInt(sliderItem.offsetWidth, 10) + parseInt(window.getComputedStyle(sliderItem,null).getPropertyValue("margin-right"), 10);
-
-window.addEventListener("resize", e => {
-    width = parseInt(sliderItem.offsetWidth, 10) + parseInt(window.getComputedStyle(sliderItem,null).getPropertyValue("margin-right"), 10) + "px";
-    scrollFeedback.max = (window.matchMedia('(max-width: 1000px)').matches) ? '8' : '7';
-});
-
 let valPrew = scrollFeedback.value;
 let sliderShift = '0px';
-
 scrollFeedback.max = (window.matchMedia('(max-width: 1000px)').matches) ? '8' : '7';
 
 scrollFeedback. addEventListener('input', () => {
@@ -50,3 +43,52 @@ scrollFeedback. addEventListener('input', () => {
     sliderShift = sliderFeedback.style.left;
     valPrew = val;
 })
+
+window.addEventListener("resize", e => {
+    width = parseInt(sliderItem.offsetWidth, 10) + parseInt(window.getComputedStyle(sliderItem,null).getPropertyValue("margin-right"), 10) + "px";
+    scrollFeedback.max = (window.matchMedia('(max-width: 1000px)').matches) ? '8' : '7';
+    sliderShift = '0px';
+    scrollFeedback.value = 0;
+    sliderFeedback.style.left = '0px'
+    valPrew = scrollFeedback.value;
+});
+
+//------------feedback-slider increase feedback--------------
+
+const feedbackContainer = document.querySelector('.feedback-comment-container'),
+      feedbackIncreaseBlock = document.querySelector('.feedback-increase'),
+      feedbackIncreaseContainer = document.querySelector('.feedback-increase-container'),
+      feedbackCross = document.querySelector('.feedback-increase-cross'),
+      feedbackBackground = document.querySelector('.feedback-increase');
+
+
+      let itemIncrease;
+
+feedbackContainer.addEventListener('click', (event) => {
+    if(event.target.offsetParent.classList.contains('feedback-item') && window.matchMedia('(max-width: 640px)').matches) {
+        itemIncrease = event.target.offsetParent.cloneNode(true);
+        feedbackIncreaseBlock.classList.add('show');
+        feedbackIncreaseBlock.classList.add('show-index');
+        feedbackIncreaseContainer.appendChild(itemIncrease);
+        itemIncrease.classList.remove('feedback-item');
+        itemIncrease.classList.add('feedback-increase-item');
+    }
+});
+
+feedbackCross.addEventListener('click', () => {
+    feedbackIncreaseBlock.classList.remove('show');
+    setTimeout(function(){
+        itemIncrease.remove();
+        feedbackIncreaseBlock.classList.remove('show-index')
+    }, 600);
+});
+
+feedbackBackground.addEventListener('click', (event) => {
+    if(event.target.classList.contains('feedback-increase')) {
+        feedbackIncreaseBlock.classList.remove('show');
+        setTimeout(function(){
+            itemIncrease.remove();
+            feedbackIncreaseBlock.classList.remove('show-index')
+        }, 600);
+    };
+});
