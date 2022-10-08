@@ -574,21 +574,28 @@ h3 {
   top: 8px;
 }
 
-.header-container .burger-menu.open span:nth-child(1) {
+.header-container .burger-menu.menu-open span:nth-child(1) {
   top: 4px;
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
+  background: #333B41;
 }
 
-.header-container .burger-menu.open span:nth-child(2) {
+.header-container .burger-menu.menu-open span:nth-child(2) {
   opacity: 0;
   right: -60px;
+  background: #333B41;
 }
 
-.header-container .burger-menu.open span:nth-child(3) {
+.header-container .burger-menu.menu-open span:nth-child(3) {
   top: 4px;
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
+  background: #333B41;
+}
+
+.header-container .burger-menu.menu-open {
+  z-index: 20;
 }
 
 .header-container .nav-logo-container {
@@ -749,6 +756,87 @@ h1 {
   h1 {
     font-size: 1.23rem;
   }
+}
+
+.burger-menu-container {
+  position: absolute;
+  z-index: 15;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #FFFFFF;
+  color: #333B41;
+  top: 0;
+  left: 100%;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 25px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.burger-menu-container .logo {
+  color: #FE9013;
+  border: 1px solid #FE9013;
+  margin-bottom: 30.4px;
+  padding: 6px 9px;
+}
+
+.burger-menu-container .logo-img {
+  left: 0.8rem;
+  bottom: 0.5rem;
+}
+
+.burger-menu-container h1 {
+  font-weight: 400;
+  font-size: 15.2116px;
+  line-height: 120%;
+}
+
+.burger-menu-container .navigation {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0px;
+}
+
+.burger-menu-container .navigation li {
+  margin-bottom: 19px;
+}
+
+.menu-open {
+  left: 0;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.background-dark {
+  position: absolute;
+  top: -100vh;
+  z-index: -15;
+  opacity: 0;
+  background-color: #000000;
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+.background-active {
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+  top: 0;
+  z-index: 10;
+  opacity: 0.5;
 }
 
 .panda-background {
