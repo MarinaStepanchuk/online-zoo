@@ -1,8 +1,8 @@
 //-----------burger-menu-----------------
 
-const burgerButton = document.querySelector('.burger-menu');
-const burgerMenu = document.querySelector('.burger-menu-container');
-const backgroundDark = document.querySelector('.background-dark');
+const burgerButton = document.querySelector('.burger-menu'),
+      burgerMenu = document.querySelector('.burger-menu-container'),
+      backgroundDark = document.querySelector('.background-dark');
 
 burgerButton.addEventListener('click', () => {
     if(burgerButton.classList.contains('menu-open')) {
@@ -24,9 +24,9 @@ backgroundDark.addEventListener('click', () => {
 
 //------------feedback-slider--------------
 
-const scrollFeedback = document.querySelector('.feedback-scroll');
-const sliderFeedback = document.querySelector('.feedback-comment-container');
-const sliderItem = document.querySelector('.feedback-item');
+const scrollFeedback = document.querySelector('.feedback-scroll'),
+      sliderFeedback = document.querySelector('.feedback-comment-container'),
+      sliderItem = document.querySelector('.feedback-item');
 
 let width = parseInt(sliderItem.offsetWidth, 10) + parseInt(window.getComputedStyle(sliderItem,null).getPropertyValue("margin-right"), 10);
 let valPrew = scrollFeedback.value;
@@ -61,8 +61,7 @@ const feedbackContainer = document.querySelector('.feedback-comment-container'),
       feedbackCross = document.querySelector('.feedback-increase-cross'),
       feedbackBackground = document.querySelector('.feedback-increase');
 
-
-      let itemIncrease;
+let itemIncrease;
 
 feedbackContainer.addEventListener('click', (event) => {
     if(event.target.offsetParent.classList.contains('feedback-item') && window.matchMedia('(max-width: 640px)').matches) {
