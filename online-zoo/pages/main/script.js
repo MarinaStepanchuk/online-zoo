@@ -26,9 +26,9 @@ backgroundDark.addEventListener('click', () => {
 
 const scrollFeedback = document.querySelector('.feedback-scroll'),
       sliderFeedback = document.querySelector('.feedback-comment-container'),
-      sliderItem = document.querySelector('.feedback-item');
+      slide = document.querySelector('.feedback-item');
 
-let width = parseInt(sliderItem.offsetWidth, 10) + parseInt(window.getComputedStyle(sliderItem,null).getPropertyValue("margin-right"), 10);
+let width = parseInt(slide.offsetWidth, 10) + parseInt(window.getComputedStyle(slide,null).getPropertyValue("margin-right"), 10);
 let valPrew = scrollFeedback.value;
 let sliderShift = '0px';
 scrollFeedback.max = (window.matchMedia('(max-width: 1000px)').matches) ? '8' : '7';
