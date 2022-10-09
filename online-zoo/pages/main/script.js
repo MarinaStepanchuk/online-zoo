@@ -45,7 +45,7 @@ scrollFeedback. addEventListener('input', () => {
 })
 
 window.addEventListener("resize", e => {
-    width = parseInt(sliderItem.offsetWidth, 10) + parseInt(window.getComputedStyle(sliderItem,null).getPropertyValue("margin-right"), 10) + "px";
+    width = parseInt(slide.offsetWidth, 10) + parseInt(window.getComputedStyle(slide,null).getPropertyValue("margin-right"), 10) + "px";
     scrollFeedback.max = (window.matchMedia('(max-width: 1000px)').matches) ? '8' : '7';
     sliderShift = '0px';
     scrollFeedback.value = 0;
@@ -98,3 +98,186 @@ feedbackBackground.addEventListener('click', (event) => {
         }, 600);
     };
 });
+
+//--------------animals carousel-------------------
+
+const animals = [
+    {
+        'id': '1',
+        'img': '../../assets/images/main/gallery-panda.jpg',
+        'name': 'giant Pandas',
+        'local': 'Native to Southwest China',
+        'icon': '../../assets/icons/banana-bamboo_icon.png',
+        'altIcon': 'banana and bamboo',
+        'type': 'vegan',
+    },
+    {
+        'id': '2',
+        'img': '../../assets/images/main/gallery-eagles.jpg',
+        'name': 'Eagles',
+        'local': 'Native to South America',
+        'icon': '../../assets/icons/meet-fish_icon.png',
+        'altIcon': 'meet and fish',
+        'type': 'meet',
+    },
+    {
+        'id': '3',
+        'img': '../../assets/images/main/gallery-gorillas.jpg',
+        'name': 'Gorillas',
+        'local': 'Native to Congo',
+        'icon': '../../assets/icons/banana-bamboo_icon.png',
+        'altIcon': 'banana and bamboo',
+        'type': 'vegan',
+    },
+    {
+        'id': '4',
+        'img': '../../assets/images/main/gallery-sloth.jpg',
+        'name': 'Two-toed Sloth',
+        'local': 'Mesoamerica, South America',
+        'icon': '../../assets/icons/banana-bamboo_icon.png',
+        'altIcon': 'banana and bamboo',
+        'type': 'vegan',
+    },
+    {
+        'id': '5',
+        'img': '../../assets/images/main/gallery-cheerahs.jpg',
+        'name': 'cheetahs',
+        'local': 'Native to Africa',
+        'icon': '../../assets/icons/meet-fish_icon.png',
+        'altIcon': 'meet and fish',
+        'type': 'meet',
+    },
+    {
+        'id': '6',
+        'img': '../../assets/images/main/gallery-penguins.jpg',
+        'name': 'Penguins',
+        'local': 'Native to Antarctica',
+        'icon': '../../assets/icons/meet-fish_icon.png',
+        'altIcon': 'meet and fish',
+        'type': 'meet',
+    },
+    {
+        'id': '7',
+        'img': '../../assets/images/main/gallery-alligators.jpg',
+        'name': 'Alligators',
+        'local': 'Native to Southeastern U. S.',
+        'icon': '../../assets/icons/meet-fish_icon.png',
+        'altIcon': 'meet and fish',
+        'type': 'meet',
+    },
+    {
+        'id': '8',
+        'img': '../../assets/images/main/gallery-gorillas2.jpg',
+        'name': 'Gorillas',
+        'local': 'Native to Congo',
+        'icon': '../../assets/icons/banana-bamboo_icon.png',
+        'altIcon': 'banana and bamboo',
+        'type': 'vegan',
+    }
+]
+
+const galery = document.querySelector('.gallery-wrapper');
+let countCards = (window.matchMedia('(max-width: 640px)').matches) ? 4 : 6;
+
+//-------рандомно выбираем набор карточек-----------
+
+let getMixCards = (cards) => {
+    let set = [];
+    while(set.length < countCards) {
+        let item = cards[Math.floor(Math.random()*cards.length)];
+        if(!set.includes(item)) {
+            set.push(item);
+        };
+    };
+    return set
+};
+
+//-----------------генерируем галерею-------------------
+
+let createSet = (set) => {
+    let cards = getMixCards(set);
+    let gallery = document.createElement('div');
+    // gallery.classList.add('gallery');
+    for(let i = 0; i < cards.length; i++) {
+        let card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `<div class="temp">
+                                <img class="card-animal" src="${cards[i].img}"></img>
+                                <div class="card-background"></div>
+                                <div class="ascent-text">
+                                    <p class="signature-text-title text-show">${cards[i].name}</p>
+                                    <span class="signature-text text-show">${cards[i].local}</span>
+                                </div>
+                            </div>
+                            <div class="card-signature">
+                                <div class="signature">
+                                    <p class="signature-text-title">${cards[i].name}</p>
+                                    <span class="signature-text">${cards[i].local}</span>
+                                </div>
+                                <img class="${cards[i].type}" src="${cards[i].icon}" alt="${cards[i].altIcon}">
+                            </div>`;
+        gallery.appendChild(card);
+    } 
+    return gallery;
+}
+
+//--------------вставляем в галерею наборы-------------
+
+const leftCards = document.querySelector('.cards-left');
+const visibleCards = document.querySelector('.cards-visible');
+const rightCards = document.querySelector('.cards-rigth');
+leftCards.innerHTML = createSet(animals).innerHTML;
+rightCards.innerHTML =  createSet(animals).innerHTML;
+visibleCards.innerHTML =  createSet(animals).innerHTML;
+
+
+const prewSlide = document.querySelector('.arrow-left');
+const nextSlide = document.querySelector('.arrow-right');
+const cardGallery = document.querySelector('.gallery');
+
+galery.style.left = 0;
+
+prewSlide.addEventListener('click', (e) => {
+    galery.style.left = parseInt(galery.style.left, 10) + parseInt(cardGallery.offsetWidth, 10) + 30 + 'px';
+})
+
+galery.addEventListener('transitionend', () => {
+            galery.style.transition = "all 0s"
+            galery.style.left = 0;
+            rightCards.innerHTML = visibleCards.innerHTML;
+            visibleCards.innerHTML = leftCards.innerHTML;
+            leftCards.innerHTML = createSet(animals).innerHTML;
+            // galery.style.transition = "all 1s"
+    // rightCards.remove();
+    // rightCards.innerHTML =  createSet(animals).innerHTML;
+    // galery.insertBefore(rightCards,leftCards)
+    if(galery.style.left > 0) {
+
+        // galery.style.transition = "all 0s"
+        galery.style.left = 0;
+        rightCards.innerHTML = visibleCards.innerHTML;
+        visibleCards.innerHTML = leftCards.innerHTML;
+        leftCards.innerHTML = createSet(animals).innerHTML;
+    }
+    // galery.style.transition = "all 1s"
+})
+
+nextSlide.addEventListener('click', (e) => {
+    galery.style.left = parseInt(galery.style.left, 10) - parseInt(cardGallery.offsetWidth, 10) - 30 + 'px';
+    leftCards.innerHTML = visibleCards.innerHTML;
+})
+
+//---------------отслеживаем изменение размеров экрана------------
+
+window.addEventListener("resize", (e) => {
+    // galery.innerHTML = '';
+    galery.style.left = 0;
+    countCards = (window.matchMedia('(max-width: 640px)').matches) ? 4 : 6;
+    // leftCards = createSet(animals);
+    // rightCards = createSet(animals);
+    // visibleCards = createSet(animals);
+    // galery.appendChild(leftCards)
+    // galery.appendChild(visibleCards)
+    // galery.appendChild(rightCards)
+});
+

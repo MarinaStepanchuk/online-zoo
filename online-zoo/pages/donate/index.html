@@ -80,7 +80,7 @@
                             <form action="#" class="donate-form">
                                 <div class="donate-radio-container">
                                     <label class="amount-item">
-                                        <input class="amount-item-radio" type="radio" name="amount">
+                                        <input class="amount-item-radio" type="radio" name="amount" value="5000">
                                         <div class="amount-item-dot">
                                         </div>
                                         <div class="amount">
@@ -91,7 +91,7 @@
                                         </div>
                                     </label>
                                     <label class="amount-item">
-                                        <input class="amount-item-radio" type="radio" name="amount">
+                                        <input class="amount-item-radio" type="radio" name="amount"  value="2000">
                                         <div class="amount-item-dot"></div>
                                         <div class="amount">
                                             <svg class="dollar" width="10" height="20" viewBox="0 0 10 20" xmlns="http://www.w3.org/2000/svg">
@@ -101,7 +101,7 @@
                                         </div>
                                     </label>
                                     <label class="amount-item">
-                                        <input class="amount-item-radio default1000" type="radio" name="amount">
+                                        <input class="amount-item-radio" type="radio" name="amount" value="1000">
                                         <div class="amount-item-dot"></div>
                                         <div class="amount">
                                             <svg class="dollar" width="10" height="20" viewBox="0 0 10 20" xmlns="http://www.w3.org/2000/svg">
@@ -111,7 +111,7 @@
                                         </div>
                                     </label>
                                     <label class="amount-item">
-                                        <input class="amount-item-radio" type="radio" name="amount">
+                                        <input class="amount-item-radio" type="radio" name="amount" value="500">
                                         <div class="amount-item-dot"></div>
                                         <div class="amount">
                                             <svg class="dollar" width="10" height="20" viewBox="0 0 10 20" xmlns="http://www.w3.org/2000/svg">
@@ -121,7 +121,7 @@
                                         </div>
                                     </label>
                                     <label class="amount-item">
-                                        <input class="amount-item-radio" type="radio" name="amount">
+                                        <input class="amount-item-radio" type="radio" name="amount" value="250">
                                         <div class="amount-item-dot"></div>
                                         <div class="amount">
                                             <svg class="dollar" width="10" height="20" viewBox="0 0 10 20" xmlns="http://www.w3.org/2000/svg">
@@ -131,7 +131,7 @@
                                         </div>
                                     </label>
                                     <label class="amount-item">
-                                        <input class="amount-item-radio default640" type="radio" name="amount">
+                                        <input class="amount-item-radio default" type="radio" name="amount" value="100">
                                         <div class="amount-item-dot"></div>
                                         <div class="amount">
                                             <svg class="dollar" width="10" height="20" viewBox="0 0 10 20" xmlns="http://www.w3.org/2000/svg">
@@ -141,7 +141,7 @@
                                         </div>
                                     </label>
                                     <label class="amount-item">
-                                        <input class="amount-item-radio" type="radio" name="amount">
+                                        <input class="amount-item-radio" type="radio" name="amount" value="50">
                                         <div class="amount-item-dot"></div>
                                         <div class="amount">
                                             <svg class="dollar" width="10" height="20" viewBox="0 0 10 20" xmlns="http://www.w3.org/2000/svg">
@@ -151,7 +151,7 @@
                                         </div>
                                     </label>
                                     <label class="amount-item">
-                                        <input class="amount-item-radio" type="radio" name="amount">
+                                        <input class="amount-item-radio" type="radio" name="amount" value="25">
                                         <div class="amount-item-dot"></div>
                                         <div class="amount">
                                             <svg class="dollar" width="10" height="20" viewBox="0 0 10 20" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +161,7 @@
                                         </div>
                                     </label>
                                 </div>
-                                <input class="input-amount" type="number" placeholder="Another amount" maxlength="4">
+                                <input class="input-amount" type="number" placeholder="Another amount" required min="0" value="100">
                                 <div class="donate-choice">
                                      <input class="radio monthly" type="radio" name="r1" id="radio1" value="Monthly"> <label for="radio1">Monthly</label>
                                      <input class="radio once" type="radio" name="r1" id="radio2" checked value="Once"> <label for="radio2">Once</label>

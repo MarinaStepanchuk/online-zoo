@@ -38,10 +38,35 @@ backgroundDark.addEventListener('click', () => {
 
 //---------------donate-------------
 
-const inputDonation = document.querySelector('.input-amount')
+const inputDonation = document.querySelector('.input-amount'),
+      choiceDonationContainer = document.querySelector('.donate-radio-container'),
+      choiseDonations = document.querySelectorAll('.amount-item-radio'),
+      defaultDonate = document.querySelector('.default');
+
+inputDonation.onkeypress = function(event) {
+    return event.charCode >= 48 && event.charCode <= 57
+}
+
+defaultDonate.setAttribute('checked', 'checked');
 
 inputDonation.addEventListener('input', () => {
     if(inputDonation.value.length > 4) {
         inputDonation.value = inputDonation.value.substr(0, 4)
+    }
+    for(let i = 0; i < choiseDonations.length; i++) {
+        choiseDonations[i].removeAttribute('checked')
+    }
+    for (let i = 0; i < choiseDonations.length; i++) {
+        if(inputDonation.value === choiseDonations[i].value) {
+            choiseDonations[i].setAttribute('checked', 'checked');
+        } else {
+            choiseDonations[i].removeAttribute('checked');
+        }
+    }
+})
+
+choiceDonationContainer.addEventListener('click', (e) => {
+    if(e.target.classList.contains('amount-item-radio')) {
+        inputDonation.value = e.target.value;
     }
 })
