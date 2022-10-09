@@ -64,7 +64,7 @@ const feedbackContainer = document.querySelector('.feedback-comment-container'),
 let itemIncrease;
 
 feedbackContainer.addEventListener('click', (event) => {
-    if(event.target.offsetParent.classList.contains('feedback-item') && window.matchMedia('(max-width: 640px)').matches) {
+    if(event.target.offsetParent.classList.contains('feedback-item') || event.target.classList.contains('feedback-item') && window.matchMedia('(max-width: 640px)').matches) {
         itemIncrease = event.target.offsetParent.cloneNode(true);
         feedbackIncreaseBlock.classList.add('show');
         feedbackIncreaseBlock.classList.add('show-index');
