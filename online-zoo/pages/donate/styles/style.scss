@@ -98,7 +98,7 @@ h3 {
     position: absolute;
     left: 0px;
     top: 0px;
-    z-index: 10;
+    z-index: 40;
     background-color: #000000;
     width: 100%;
     padding-top: 1.5rem;
@@ -186,7 +186,7 @@ h3 {
             opacity: 1;
             left: 0;
             transform: rotate(0deg);
-            transition: .25s ease-in-out;
+            transition: 1s ease-in-out;
         }
 
         & span:nth-child(1) {
@@ -333,48 +333,50 @@ h1 {
 }
 
 .burger-menu-container {
-    position: absolute;
-    z-index: 15;
-    width: 100%;
-    @include flex-direction(column);
-    background-color: #FFFFFF;
-    color: #333B41;
-    top: 0;
-    left: 100%;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 25px;
-    transition: all 1s;
-    align-items: flex-start;
+    display: none;
 
-    .logo {
-        color: #FE9013;
-        border: 1px solid #FE9013;
-        margin-bottom: 30.4px;
-        padding: 6px 9px;
+    @media screen and (max-width: 640px) {
+        position: absolute;
+        z-index: 15;
+        width: 100%;
+        @include flex-direction(column);
+        background-color: #FFFFFF;
+        color: #333B41;
+        top: 0;
+        left: 100%;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 25px;
+        transition: all 1s;
+        align-items: flex-start;
+    
+        .logo {
+            color: #FE9013;
+            border: 1px solid #FE9013;
+            margin-bottom: 30.4px;
+            padding: 6px 9px;
+        }
+    
+        .logo-img {
+            left: 0.8rem;
+            bottom: 0.5rem;
+        }
+    
+        h1 {
+            font-weight: 400;
+            font-size: 15.2116px;
+            line-height: 120%;
+    
+        }
+    
+        .navigation {
+            flex-direction: column;
+            margin: 0px;
+                li {
+                    margin-bottom: 19px;
+                }
+        }
     }
-
-    .logo-img {
-        left: 0.8rem;
-        bottom: 0.5rem;
-    }
-
-    h1 {
-        font-weight: 400;
-        font-size: 15.2116px;
-        line-height: 120%;
-
-    }
-
-    .navigation {
-        flex-direction: column;
-        margin: 0px;
-            li {
-                margin-bottom: 19px;
-            }
-    }
-
-
 }
 
 .menu-open {
