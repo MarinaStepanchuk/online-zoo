@@ -1,17 +1,3 @@
-// function check () {
-
-//     if(window.innerWidth > 640) {
-//         document.querySelector('.default640').removeAttribute('checked');
-//         document.querySelector('.default1000').setAttribute('checked', 'checked');
-//     } else  {
-//         document.querySelector('.default1000').removeAttribute('checked');
-//         document.querySelector('.default640').setAttribute('checked', 'checked');
-//     }
-// }
-
-// window.addEventListener('resize', check)
-// check()
-
 //-----------burger-menu-----------------
 
 const burgerButton = document.querySelector('.burger-menu');
@@ -27,14 +13,14 @@ burgerButton.addEventListener('click', () => {
         burgerMenu.classList.add('menu-open');
         burgerButton.classList.add('menu-open');
         backgroundDark.classList.add('background-active');
-    }
-})
+    };
+});
 
 backgroundDark.addEventListener('click', () => {
     burgerMenu.classList.remove('menu-open');
     burgerButton.classList.remove('menu-open');
     backgroundDark.classList.remove('background-active');
-})
+});
 
 //---------------donate-------------
 
@@ -45,7 +31,7 @@ const inputDonation = document.querySelector('.input-amount'),
 
 inputDonation.onkeypress = function(event) {
     return event.charCode >= 48 && event.charCode <= 57
-}
+};
 
 defaultDonate.setAttribute('checked', 'checked');
 
@@ -61,12 +47,12 @@ inputDonation.addEventListener('input', () => {
             choiseDonations[i].setAttribute('checked', 'checked');
         } else {
             choiseDonations[i].removeAttribute('checked');
-        }
-    }
+        };
+    };
 })
 
 choiceDonationContainer.addEventListener('click', (e) => {
     if(e.target.classList.contains('amount-item-radio')) {
         inputDonation.value = e.target.value;
-    }
-})
+    };
+});

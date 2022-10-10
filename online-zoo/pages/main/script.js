@@ -282,7 +282,7 @@ gallery.style.left = 0;
 let canAnimate = true;
 let directionAnimate;
 
-prevSlide.addEventListener('click', (e) => {
+nextSlide.addEventListener('click', (e) => {
     directionAnimate = 'left';
     if(canAnimate) {
         gallery.style.left = -visibleCards.clientWidth - 30 + 'px';
@@ -294,7 +294,7 @@ prevSlide.addEventListener('click', (e) => {
     };
 });
 
-nextSlide.addEventListener('click', (e) => {
+prevSlide.addEventListener('click', (e) => {
     directionAnimate = 'right';
     if(canAnimate) {
         gallery.style.left = visibleCards.clientWidth + 30 + 'px';
