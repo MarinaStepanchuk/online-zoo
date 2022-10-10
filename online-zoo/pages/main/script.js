@@ -197,7 +197,7 @@ let getMixCards = (cards) => {
 let createSet = (set) => {
     let cards = getMixCards(set);
     let gallery = document.createElement('div');
-    // gallery.classList.add('gallery');
+    gallery.classList.add('gallery');
     for(let i = 0; i < cards.length; i++) {
         let card = document.createElement('div');
         card.classList.add('card');
@@ -234,50 +234,53 @@ visibleCards.innerHTML =  createSet(animals).innerHTML;
 const prewSlide = document.querySelector('.arrow-left');
 const nextSlide = document.querySelector('.arrow-right');
 const cardGallery = document.querySelector('.gallery');
+const animalsBlock = document.querySelector('.animals-gallery-container');
 
 galery.style.left = 0;
+let canAnimate = true;
 
 prewSlide.addEventListener('click', (e) => {
-    galery.style.left = parseInt(galery.style.left, 10) + parseInt(cardGallery.offsetWidth, 10) + 30 + 'px';
+    if(canAnimate) {
+        galery.style.left = parseInt(galery.style.left, 10) + parseInt(cardGallery.offsetWidth, 10) + 30 + 'px';
+        canAnimate = false;
+        setTimeout(() => (canAnimate = true), 1000);
+    }
 })
 
 galery.addEventListener('transitionend', () => {
-            galery.style.transition = "all 0s"
-            galery.style.left = 0;
-            rightCards.innerHTML = visibleCards.innerHTML;
-            visibleCards.innerHTML = leftCards.innerHTML;
-            leftCards.innerHTML = createSet(animals).innerHTML;
-            // galery.style.transition = "all 1s"
-    // rightCards.remove();
-    // rightCards.innerHTML =  createSet(animals).innerHTML;
-    // galery.insertBefore(rightCards,leftCards)
-    if(galery.style.left > 0) {
-
-        // galery.style.transition = "all 0s"
-        galery.style.left = 0;
+    if(parseInt(galery.style.left,10) > 0) {
+        galery.style.transition = "all 0s"
+        galery.style.left = '0px';
         rightCards.innerHTML = visibleCards.innerHTML;
         visibleCards.innerHTML = leftCards.innerHTML;
         leftCards.innerHTML = createSet(animals).innerHTML;
+    } else {
+        galery.style.transition = "all 0s"
+        galery.style.left = '0px';
+        leftCards.innerHTML = visibleCards.innerHTML;
+        visibleCards.innerHTML = rightCards.innerHTML;
+        rightCards.innerHTML = createSet(animals).innerHTML;
     }
-    // galery.style.transition = "all 1s"
+    setTimeout(function() {
+        galery.style.transition = "all 1s"
+    },1000)
 })
 
 nextSlide.addEventListener('click', (e) => {
-    galery.style.left = parseInt(galery.style.left, 10) - parseInt(cardGallery.offsetWidth, 10) - 30 + 'px';
-    leftCards.innerHTML = visibleCards.innerHTML;
+    if(canAnimate) {
+        galery.style.left = parseInt(galery.style.left, 10) - parseInt(cardGallery.offsetWidth, 10) - 30 + 'px';
+        canAnimate = false;
+        setTimeout(() => (canAnimate = true), 1000);
+    }
 })
 
 //---------------отслеживаем изменение размеров экрана------------
 
 window.addEventListener("resize", (e) => {
-    // galery.innerHTML = '';
     galery.style.left = 0;
     countCards = (window.matchMedia('(max-width: 640px)').matches) ? 4 : 6;
-    // leftCards = createSet(animals);
-    // rightCards = createSet(animals);
-    // visibleCards = createSet(animals);
-    // galery.appendChild(leftCards)
-    // galery.appendChild(visibleCards)
-    // galery.appendChild(rightCards)
+    leftCards.innerHTML = createSet(animals).innerHTML;
+    rightCards.innerHTML =  createSet(animals).innerHTML;
+    visibleCards.innerHTML =  createSet(animals).innerHTML;
 });
 

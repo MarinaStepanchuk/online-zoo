@@ -1605,6 +1605,7 @@ h1 {
 }
 
 .arrow {
+  position: relative;
   width: 62px;
   height: 62px;
   background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
@@ -1634,7 +1635,6 @@ h1 {
 
 @media screen and (max-width: 1000px) {
   .arrow {
-    position: relative;
     margin-left: -6.2rem;
   }
 }
@@ -1647,46 +1647,56 @@ h1 {
 
 @media screen and (max-width: 1000px) {
   .arrow-left {
-    left: 38.5rem;
+    left: 42%;
     bottom: 0.3rem;
   }
 }
 
 @media screen and (max-width: 820px) {
   .arrow-left {
-    left: 28.5rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .arrow-left {
-    left: 14rem;
+    left: 45%;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .arrow-right {
-    right: 32.2rem;
+    right: 35%;
     bottom: 0.3rem;
   }
 }
 
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 620px) {
   .arrow-right {
-    right: 22.2rem;
+    right: 31%;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   .arrow-right {
-    right: 8rem;
+    right: 28%;
   }
+}
+
+@media screen and (max-width: 400px) {
+  .arrow-right {
+    right: 25%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .arrow-right {
+    right: 22%;
+  }
+}
+
+.gallery-container-overflow {
+  overflow-x: hidden;
 }
 
 .gallery-wrapper {
   position: relative;
-  -webkit-transition: left 1s;
-  transition: left 1s;
+  -webkit-transition: translate 1s;
+  transition: translate 1s;
   max-width: calc(1322px * 3 + 60px);
   display: -webkit-box;
   display: -ms-flexbox;
