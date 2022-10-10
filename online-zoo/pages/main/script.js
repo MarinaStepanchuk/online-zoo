@@ -173,10 +173,55 @@ const animals = [
         'icon': '../../assets/icons/banana-bamboo_icon.png',
         'altIcon': 'banana and bamboo',
         'type': 'vegan',
+    },
+    {
+        'id': '9',
+        'img': '../../assets/images/main/gallery-baboon.jpg',
+        'name': 'Baboon',
+        'local': 'Native to Africa',
+        'icon': '../../assets/icons/banana-bamboo_icon.png',
+        'altIcon': 'banana and bamboo',
+        'type': 'vegan',
+    },
+    {
+        'id': '10',
+        'img': '../../assets/images/main/gallery-elephants.jpg',
+        'name': 'Elephants',
+        'local': 'Native to Africa',
+        'icon': '../../assets/icons/banana-bamboo_icon.png',
+        'altIcon': 'banana and bamboo',
+        'type': 'vegan',
+    },
+    {
+        'id': '11',
+        'img': '../../assets/images/main/gallery-giraffe.jpg',
+        'name': 'Giraffe',
+        'local': 'Native to Africa',
+        'icon': '../../assets/icons/banana-bamboo_icon.png',
+        'altIcon': 'banana and bamboo',
+        'type': 'vegan',
+    }, 
+    {
+        'id': '12',
+        'img': '../../assets/images/main/gallery-hippo.jpg',
+        'name': 'Hippo',
+        'local': 'Native to Africa',
+        'icon': '../../assets/icons/meet-fish_icon.png',
+        'altIcon': 'meet and fish',
+        'type': 'meet',
+    },
+    {
+        'id': '13',
+        'img': '../../assets/images/main/gallery-tiger.jpg',
+        'name': 'Tiger',
+        'local': 'Native to Africa',
+        'icon': '../../assets/icons/meet-fish_icon.png',
+        'altIcon': 'meet and fish',
+        'type': 'meet',
     }
 ]
 
-const galery = document.querySelector('.gallery-wrapper');
+const gallery = document.querySelector('.gallery-wrapper');
 let countCards = (window.matchMedia('(max-width: 640px)').matches) ? 4 : 6;
 
 //-------рандомно выбираем набор карточек-----------
@@ -230,54 +275,57 @@ leftCards.innerHTML = createSet(animals).innerHTML;
 rightCards.innerHTML =  createSet(animals).innerHTML;
 visibleCards.innerHTML =  createSet(animals).innerHTML;
 
-
-const prewSlide = document.querySelector('.arrow-left');
+const prevSlide = document.querySelector('.arrow-left');
 const nextSlide = document.querySelector('.arrow-right');
-const cardGallery = document.querySelector('.gallery');
-const animalsBlock = document.querySelector('.animals-gallery-container');
 
-galery.style.left = 0;
+gallery.style.left = 0;
 let canAnimate = true;
+let directionAnimate;
 
-prewSlide.addEventListener('click', (e) => {
+prevSlide.addEventListener('click', (e) => {
+    directionAnimate = 'left';
     if(canAnimate) {
-        galery.style.left = parseInt(galery.style.left, 10) + parseInt(cardGallery.offsetWidth, 10) + 30 + 'px';
+        gallery.style.left = -visibleCards.clientWidth - 30 + 'px';
+        gallery.style.transition = 'left 0.6s linear';
         canAnimate = false;
-        setTimeout(() => (canAnimate = true), 1000);
-    }
-})
-
-galery.addEventListener('transitionend', () => {
-    if(parseInt(galery.style.left,10) > 0) {
-        galery.style.transition = "all 0s"
-        galery.style.left = '0px';
-        rightCards.innerHTML = visibleCards.innerHTML;
-        visibleCards.innerHTML = leftCards.innerHTML;
-        leftCards.innerHTML = createSet(animals).innerHTML;
-    } else {
-        galery.style.transition = "all 0s"
-        galery.style.left = '0px';
-        leftCards.innerHTML = visibleCards.innerHTML;
-        visibleCards.innerHTML = rightCards.innerHTML;
-        rightCards.innerHTML = createSet(animals).innerHTML;
-    }
-    setTimeout(function() {
-        galery.style.transition = "all 1s"
-    },1000)
-})
+        setTimeout(() => {
+            shiftGallery(directionAnimate);
+        }, 700);
+    };
+});
 
 nextSlide.addEventListener('click', (e) => {
+    directionAnimate = 'right';
     if(canAnimate) {
-        galery.style.left = parseInt(galery.style.left, 10) - parseInt(cardGallery.offsetWidth, 10) - 30 + 'px';
+        gallery.style.left = visibleCards.clientWidth + 30 + 'px';
+        gallery.style.transition = 'left 0.6s linear';
         canAnimate = false;
-        setTimeout(() => (canAnimate = true), 1000);
-    }
-})
+        setTimeout(() => {
+            shiftGallery(directionAnimate)
+        }, 700);
+    };
+});
+
+let shiftGallery = (direction) => {
+    gallery.style.left = 0;
+    gallery.style.transform = 'none';
+    gallery.style.transition = 'none';
+    canAnimate = true;
+    if (direction === 'left') {
+        visibleCards.innerHTML =  rightCards.innerHTML;
+        leftCards.innerHTML = createSet(animals).innerHTML;
+        rightCards.innerHTML = createSet(animals).innerHTML;
+    } else {
+
+        visibleCards.innerHTML = leftCards.innerHTML;
+        rightCards.innerHTML = createSet(animals).innerHTML;
+        leftCards.innerHTML = createSet(animals).innerHTML;
+    };
+};
 
 //---------------отслеживаем изменение размеров экрана------------
 
 window.addEventListener("resize", (e) => {
-    galery.style.left = 0;
     countCards = (window.matchMedia('(max-width: 640px)').matches) ? 4 : 6;
     leftCards.innerHTML = createSet(animals).innerHTML;
     rightCards.innerHTML =  createSet(animals).innerHTML;

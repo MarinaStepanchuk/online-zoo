@@ -165,6 +165,7 @@ h3 {
 
     .burger-menu {
         display: none;
+        cursor: pointer;
 
         @media screen and (max-width: 640px) {
             display: block;
@@ -979,7 +980,17 @@ h1 {
 
         &[type=number] {
             -moz-appearance: textfield;
-          }
+        }
+    
+    &:valid {
+        border: 1px solid #4B9200;
+        background-image: url(../../../assets/icons/dollar-green.png);
+    }
+
+    &:invalid {
+        border: 1px solid #D31414;
+        background-image: url(../../../assets/icons/dollar-red.png);
+    }
 }
 
 .donate-choice {
